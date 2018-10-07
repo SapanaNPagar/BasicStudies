@@ -1,0 +1,23 @@
+package com.sap.postRequests;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+
+public class post_SD {
+
+	@Given("^user hit the post request from String$")
+	public void user_hit_the_post_request_from_String(){
+		resp = RestAssured.given().accept(ContentType.JSON).relaxedHTTPSValidation().
+				when().body("{    \"name\": \"Tom\",    \"job\":\"Actor\"}").post("https://reqres.in/api/users");
+		resp.then().log().all();
+		resp.then().log().status();
+		System.out.println("====="+resp.asString());
+	}
+
+	@Then("^user validate the id is not null$")
+	public void user_validate_the_id_is_not_null() throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+		throw new PendingException();
+	}
+
+}

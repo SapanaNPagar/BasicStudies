@@ -1,0 +1,13 @@
+package com.sap.TrainMe;
+
+public class FirstSD {
+
+	public static void main(String[] args) {
+		System.out.println("Hi");
+		/*
+		 * Response rs = RestAssured.given().when().get("https://www.google.com/"); int
+		 * i = rs.statusCode(); System.out.println("Status Code is = " + i);
+		 */
+	}
+
+}

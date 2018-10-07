@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: com.sap.f2.F2_RunTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.692 sec <<< FAILURE!
+Then user checks at path "MRData.CircuitTable.Circuits.circuitId[0]" with the "albert_park" value(Scenario: Test API response for normal details)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<false> but was:<true>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.sap.f2.F2_SD.user_checks_at_path_with_the_value(F2_SD.java:75)
+	at ✽.Then user checks at path "MRData.CircuitTable.Circuits.circuitId[0]" with the "albert_park" value(com/sap/f2/F2_circuits.feature:10)
+
+Scenario: Test API response for normal details  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<false> but was:<true>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.sap.f2.F2_SD.user_checks_at_path_with_the_value(F2_SD.java:75)
+	at ✽.Then user checks at path "MRData.CircuitTable.Circuits.circuitId[0]" with the "albert_park" value(com/sap/f2/F2_circuits.feature:10)
+

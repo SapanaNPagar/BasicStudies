@@ -1,0 +1,13 @@
+package com.sap.TrainMe;
+
+import io.restassured.RestAssured;
+
+public class FirstSD {
+
+	public static void main(String[] args) {
+		System.out.println("Hi");
+		RestAssured.given().when().get("https://www.google.com/");
+
+	}
+
+}

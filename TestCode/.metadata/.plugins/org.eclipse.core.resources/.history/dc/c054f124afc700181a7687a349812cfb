@@ -1,0 +1,96 @@
+package com.ict.am3.automation.stepDefinitions;
+
+import static io.restassured.RestAssured.baseURI;
+import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.equalTo;
+
+import java.io.IOException;
+import java.util.Map;
+
+import org.hamcrest.Matchers;
+
+import com.ict.am3.automation.base.BaseClass;
+import com.ict.am3.automation.utilities.Helper;
+
+import cucumber.api.DataTable;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
+import io.restassured.specification.RequestSpecification;
+
+public class CreateWorkerStepDefinition extends BaseClass {
+
+    RequestSpecification request;
+    Response response;
+    JsonPath jsonPathEvaluator;
+    ValidatableResponse json;
+    static String mrkOrg;
+    String jsonId;
+
+    @Given("^I set the base URI for the Worker Creation$")
+    public void i_set_the_base_URI_for_the_Worker_Creation() throws Throwable {
+	baseURI = property.valueFromConfig("CreateWorkerURI");
+    }
+
+    @Given("^I set testing parameter for \"([^\"]*)\"$")
+    public void i_set_testing_parameter_for(String jsonName, DataTable table) throws IOException {
+	Helper helper = new Helper();
+	request = helper.requestBuilder(table, jsonName);
+    }
+
+    @When("^I hit the api for worker creation$")
+    public void i_hit_the_api_for_worker_creation() throws Throwable {
+	response = request.when().post();
+    }
+
+    @Then("^worker should get created successfully with response code \"([^\"]*)\"$")
+    public void worker_should_get_created_successfully_with_response_code(int rspCode) throws Throwable {
+	json = response.then().statusCode(rspCode);
+	response.then().log().all();
+	json.body(Matchers.containsString("userId"));
+	json.body(Matchers.containsString("workerId"));
+    }
+
+    @Then("the status code is (\\d+)")
+    public void verify_status_code(int statusCode) {
+	json = response.then().statusCode(statusCode).log().all();
+    }
+
+    @Then("^the content type is json$")
+    public void verify_content_type_is_json() {
+	json = response.then().contentType(ContentType.JSON);
+    }
+
+    @Then("^validation error for field$")
+    public void validation_error_for_field(Map<String, String> responseFields) {
+	for (Map.Entry<String, String> field : responseFields.entrySet()) {
+	    json.body(field.getKey().trim(), containsInAnyOrder(field.getValue().trim().split(",")));
+	}
+    }
+
+    @Then("^error is \"([^\"]*)\"$")
+    public void error_is(String error) {
+	json.body("error", equalTo(error));
+    }
+
+    @Then("^error code is \"([^\"]*)\"$")
+    public void error_code_is(String errorCode) {
+	json.body("errors.code", equalTo(errorCode));
+    }
+
+    /**
+     * Error fields validated when there is only single error message.
+     *
+     * @param responseFields
+     */
+    @Then("^validation error for field without splitting$")
+    public void validation_error_for_field_without_splitting(Map<String, String> responseFields) {
+	for (Map.Entry<String, String> field : responseFields.entrySet()) {
+	    json.body(field.getKey(), containsInAnyOrder(field.getValue()));
+	}
+    }
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="F2_RunTest" project="TrainMe" tests="21" started="21" failures="6" errors="0" ignored="3">
+  <testsuite name="com.sap.f2.F2_RunTest" time="4.466">
+    <testsuite name="Feature: Test Circuit API" time="4.466">
+      <testsuite name="Scenario Outline: Test API response for normal details" time="4.466">
+        <testsuite name="Examples:" time="4.466">
+          <testsuite name="| 1 | Manager |" time="0.404" incomplete="true">
+            <failure>java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.sap.f2.F2_SD.user_checks_at_path_with_the_value(F2_SD.java:75)
+	at ✽.Then user checks at path "MRData.CircuitTable.Circuits.circuitId[0]" with the "albert_park" value(com/sap/f2/F2_circuits.feature:9)
+
+</failure>
+            <testcase name="Given user start the rest asured test" classname="| 1 | Manager |" time="0.02"/>
+            <testcase name="When user hit the get request" classname="| 1 | Manager |" time="0.005"/>
+            <testcase name="Then user checks 200 the status code" classname="| 1 | Manager |" time="0.347"/>
+            <testcase name="Then user checks the count or size" classname="| 1 | Manager |" time="0.001"/>
+            <testcase name="Then user checks &quot;albert_park&quot; value" classname="| 1 | Manager |" time="0.028"/>
+            <testcase name="Then user checks at path &quot;MRData.CircuitTable.Circuits.circuitId[0]&quot; with the &quot;albert_park&quot; value" classname="| 1 | Manager |" time="0.003">
+              <failure>java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.sap.f2.F2_SD.user_checks_at_path_with_the_value(F2_SD.java:75)
+	at ✽.Then user checks at path "MRData.CircuitTable.Circuits.circuitId[0]" with the "albert_park" value(com/sap/f2/F2_circuits.feature:9)
+
+</failure>
+            </testcase>
+            <testcase name="Then user checks at path &quot;1&quot; with the &quot;Manager&quot; value" classname="| 1 | Manager |" time="0.0" ignored="true"/>
+          </testsuite>
+          <testsuite name="| 2 | QA Engineer |" time="0.054" incomplete="true">
+            <failure>java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.sap.f2.F2_SD.user_checks_at_path_with_the_value(F2_SD.java:75)
+	at ✽.Then user checks at path "MRData.CircuitTable.Circuits.circuitId[0]" with the "albert_park" value(com/sap/f2/F2_circuits.feature:9)
+
+</failure>
+            <testcase name="Given user start the rest asured test" classname="| 2 | QA Engineer |" time="0.002"/>
+            <testcase name="When user hit the get request" classname="| 2 | QA Engineer |" time="0.001"/>
+            <testcase name="Then user checks 200 the status code" classname="| 2 | QA Engineer |" time="0.033"/>
+            <testcase name="Then user checks the count or size" classname="| 2 | QA Engineer |" time="0.001"/>
+            <testcase name="Then user checks &quot;albert_park&quot; value" classname="| 2 | QA Engineer |" time="0.017"/>
+            <testcase name="Then user checks at path &quot;MRData.CircuitTable.Circuits.circuitId[0]&quot; with the &quot;albert_park&quot; value" classname="| 2 | QA Engineer |" time="0.0">
+              <failure>java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.sap.f2.F2_SD.user_checks_at_path_with_the_value(F2_SD.java:75)
+	at ✽.Then user checks at path "MRData.CircuitTable.Circuits.circuitId[0]" with the "albert_park" value(com/sap/f2/F2_circuits.feature:9)
+
+</failure>
+            </testcase>
+            <testcase name="Then user checks at path &quot;2&quot; with the &quot;QA Engineer&quot; value" classname="| 2 | QA Engineer |" time="0.0" ignored="true"/>
+          </testsuite>
+          <testsuite name="| 3 | Director |" time="0.059" incomplete="true">
+            <failure>java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.sap.f2.F2_SD.user_checks_at_path_with_the_value(F2_SD.java:75)
+	at ✽.Then user checks at path "MRData.CircuitTable.Circuits.circuitId[0]" with the "albert_park" value(com/sap/f2/F2_circuits.feature:9)
+
+</failure>
+            <testcase name="Given user start the rest asured test" classname="| 3 | Director |" time="0.002"/>
+            <testcase name="When user hit the get request" classname="| 3 | Director |" time="0.0"/>
+            <testcase name="Then user checks 200 the status code" classname="| 3 | Director |" time="0.037"/>
+            <testcase name="Then user checks the count or size" classname="| 3 | Director |" time="0.0"/>
+            <testcase name="Then user checks &quot;albert_park&quot; value" classname="| 3 | Director |" time="0.019"/>
+            <testcase name="Then user checks at path &quot;MRData.CircuitTable.Circuits.circuitId[0]&quot; with the &quot;albert_park&quot; value" classname="| 3 | Director |" time="0.0">
+              <failure>java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.sap.f2.F2_SD.user_checks_at_path_with_the_value(F2_SD.java:75)
+	at ✽.Then user checks at path "MRData.CircuitTable.Circuits.circuitId[0]" with the "albert_park" value(com/sap/f2/F2_circuits.feature:9)
+
+</failure>
+            </testcase>
+            <testcase name="Then user checks at path &quot;3&quot; with the &quot;Director&quot; value" classname="| 3 | Director |" time="0.004" ignored="true"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

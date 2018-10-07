@@ -1,0 +1,6 @@
+package com.sap.TrainMe;
+
+@Cucumber(features = "src/test/java/com/sap/TrainMe")
+public class runner {
+
+}
