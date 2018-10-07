@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="F2_RunTest" project="TrainMe" tests="21" started="21" failures="0" errors="0" ignored="3">
+  <testsuite name="com.sap.f2.F2_RunTest" time="5.033">
+    <testsuite name="Feature: Test Circuit API" time="5.033">
+      <testsuite name="Scenario Outline: Test API response for normal details" time="5.033">
+        <testsuite name="Examples:" time="5.033">
+          <testsuite name="| 1 | Manager |" time="0.458" incomplete="true">
+            <skipped/>
+            <testcase name="Given user start the rest asured test" classname="| 1 | Manager |" time="0.022"/>
+            <testcase name="When user hit the get request" classname="| 1 | Manager |" time="0.003"/>
+            <testcase name="Then user checks 200 the status code" classname="| 1 | Manager |" time="0.4"/>
+            <testcase name="Then user checks the count or size" classname="| 1 | Manager |" time="0.001"/>
+            <testcase name="Then user checks &quot;albert_park&quot; value" classname="| 1 | Manager |" time="0.031"/>
+            <testcase name="Then user checks at path &quot;MRData.CircuitTable.Circuits.circuitId[0]&quot; with the &quot;albert_park&quot; value" classname="| 1 | Manager |" time="0.001"/>
+            <testcase name="Then user checks at &quot;1&quot; with the &quot;Manager&quot; value" classname="| 1 | Manager |" time="0.0" ignored="true"/>
+          </testsuite>
+          <testsuite name="| 2 | QA Engineer |" time="0.061" incomplete="true">
+            <skipped/>
+            <testcase name="Given user start the rest asured test" classname="| 2 | QA Engineer |" time="0.003"/>
+            <testcase name="When user hit the get request" classname="| 2 | QA Engineer |" time="0.0"/>
+            <testcase name="Then user checks 200 the status code" classname="| 2 | QA Engineer |" time="0.04"/>
+            <testcase name="Then user checks the count or size" classname="| 2 | QA Engineer |" time="0.001"/>
+            <testcase name="Then user checks &quot;albert_park&quot; value" classname="| 2 | QA Engineer |" time="0.017"/>
+            <testcase name="Then user checks at path &quot;MRData.CircuitTable.Circuits.circuitId[0]&quot; with the &quot;albert_park&quot; value" classname="| 2 | QA Engineer |" time="0.0"/>
+            <testcase name="Then user checks at &quot;2&quot; with the &quot;QA Engineer&quot; value" classname="| 2 | QA Engineer |" time="0.0" ignored="true"/>
+          </testsuite>
+          <testsuite name="| 3 | Director |" time="0.051" incomplete="true">
+            <skipped/>
+            <testcase name="Given user start the rest asured test" classname="| 3 | Director |" time="0.002"/>
+            <testcase name="When user hit the get request" classname="| 3 | Director |" time="0.0"/>
+            <testcase name="Then user checks 200 the status code" classname="| 3 | Director |" time="0.032"/>
+            <testcase name="Then user checks the count or size" classname="| 3 | Director |" time="0.0"/>
+            <testcase name="Then user checks &quot;albert_park&quot; value" classname="| 3 | Director |" time="0.016"/>
+            <testcase name="Then user checks at path &quot;MRData.CircuitTable.Circuits.circuitId[0]&quot; with the &quot;albert_park&quot; value" classname="| 3 | Director |" time="0.0"/>
+            <testcase name="Then user checks at &quot;3&quot; with the &quot;Director&quot; value" classname="| 3 | Director |" time="0.001" ignored="true"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

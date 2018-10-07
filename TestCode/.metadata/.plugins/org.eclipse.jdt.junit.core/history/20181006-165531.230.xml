@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DataDrivenTest_RunTest" project="TrainMe" tests="12" started="12" failures="0" errors="0" ignored="0">
+  <testsuite name="com.sap.dataDriven.DataDrivenTest_RunTest" time="7.296">
+    <testsuite name="Feature: Data driven in Rest Assured test POST1" time="7.296">
+      <testsuite name="Scenario Outline: Test data driven111" time="7.296">
+        <testsuite name="Examples:" time="7.296">
+          <testsuite name="| Tom | Manager |" time="4.102">
+            <testcase name="Given user update name with &quot;Tom&quot; name" classname="| Tom | Manager |" time="0.001"/>
+            <testcase name="When user update job with &quot;Manager&quot; name" classname="| Tom | Manager |" time="3.776"/>
+            <testcase name="Then user post the request" classname="| Tom | Manager |" time="0.325"/>
+            <testcase name="Then user validate the id is not null" classname="| Tom | Manager |" time="0.0"/>
+          </testsuite>
+          <testsuite name="| Jerry | QA Engineer |" time="1.763">
+            <testcase name="Given user update name with &quot;Jerry&quot; name" classname="| Jerry | QA Engineer |" time="0.0"/>
+            <testcase name="When user update job with &quot;QA Engineer&quot; name" classname="| Jerry | QA Engineer |" time="1.744"/>
+            <testcase name="Then user post the request" classname="| Jerry | QA Engineer |" time="0.018"/>
+            <testcase name="Then user validate the id is not null" classname="| Jerry | QA Engineer |" time="0.0"/>
+          </testsuite>
+          <testsuite name="| Charlin | Director |" time="1.423">
+            <testcase name="Given user update name with &quot;Charlin&quot; name" classname="| Charlin | Director |" time="0.0"/>
+            <testcase name="When user update job with &quot;Director&quot; name" classname="| Charlin | Director |" time="1.407"/>
+            <testcase name="Then user post the request" classname="| Charlin | Director |" time="0.014"/>
+            <testcase name="Then user validate the id is not null" classname="| Charlin | Director |" time="0.002"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>
